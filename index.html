@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CABAÑAS</title>
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+	<script type="text/javascript" src="cabana.js"></script>
+	<script type="text/javascript" src="cliente.js"></script>
+	<script type="text/javascript" src="mensaje.js"></script>
+</head>
+<body>
+	<br>	
+	<div class="container">
+	<h1>CABAÑAS</h1>
+	<br>
+	<form>
+		<input type="number" id="id_cab" placeholder="ID">
+		<input type="text" id="brand_cab" placeholder="Brand"></label>
+		<input type="number" id="rooms_cab" placeholder="Rooms"></label>
+		<input type="text" id="category_cab" placeholder="Category"></label>
+		<input type="text" id="name_cab" placeholder="Name"></label>
+		<br><br>
+	</form>
+	<button class="btn btn-primary" onclick="insertar_cab()">Crear Cabaña</button>
+	<button class="btn btn-primary" onclick="actualizar_cab()">Actualizar Cabaña</button>
+	<br><br>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+				  <th>ID</th>
+				  <th>Brand</th>
+				  <th>Rooms</th>
+				  <th>Category</th>
+				  <th>Name</th>
+				  <th>Edit</th>
+				  <th>Delete</th>
+				</tr>
+			  </thead>
+			<tbody id="resultado_cab">
+
+			</tbody>
+		</table>
+	<button class="btn btn-primary" onclick="consultar_cab()">Consultar Cabañas</button>
+	</div>
+	
+	<br>	
+	<div class="container">
+	<h1>CLIENTES</h1>
+	<br>
+	<form>
+		<input type="number" id="id_cli" placeholder="ID">
+		<input type="text" id="name_cli" placeholder="Name"></label>
+		<input type="text" id="email_cli" placeholder="Email"></label>
+		<input type="text" id="age_cli" placeholder="Age"></label>
+		<br><br>
+	</form>
+	<button class="btn btn-success" onclick="insertar_cli()">Crear Cliente</button>
+	<button class="btn btn-success" onclick="actualizar_cli()">Actualizar Cliente</button>
+	<br><br>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+				  <th>ID</th>
+				  <th>Name</th>
+				  <th>Email</th>
+				  <th>Age</th>
+				  <th>Edit</th>
+				  <th>Delete</th>
+				</tr>
+			  </thead>
+			<tbody id="resultado_cli">
+
+			</tbody>
+		</table>
+	<button class="btn btn-success" onclick="consultar_cli()">Consultar Clientes</button>
+	</div>
+
+	<br>	
+	<div class="container">
+	<h1>MENSAJES</h1>
+	<br>
+	<form>
+		<input type="number" id="id_msj" placeholder="ID">
+		<input type="text" id="messagetext_msj" placeholder="Message"></label>
+		<br><br>
+	</form>
+	<button class="btn btn-info" onclick="insertar_msj()">Crear Mensaje</button>
+	<button class="btn btn-info" onclick="actualizar_msj()">Actualizar Mensaje</button>
+	<br><br>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+				  <th>ID</th>
+				  <th>Message</th>
+				  <th>Edit</th>
+				  <th>Delete</th>
+				</tr>
+			  </thead>
+			<tbody id="resultado_msj">
+
+			</tbody>
+		</table>
+	<button class="btn btn-info" onclick="consultar_msj()">Consultar Mensaje</button>
+	</div>
+
+</body>
+</html>
